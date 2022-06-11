@@ -44,7 +44,6 @@ export const Quiz = () => {
     },[]);
 
     const pickAnswer=(questionId, answer) =>{
-        console.log("clicked")
         setQuizzes((prevQuestions)=>{
             return prevQuestions.map((question)=>{
                 if(question.id === questionId){
