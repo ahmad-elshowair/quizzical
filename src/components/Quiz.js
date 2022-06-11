@@ -1,5 +1,6 @@
 import { nanoid } from "nanoid";
 import React from "react"
+import Confetti from "react-confetti/dist/types/Confetti";
 import { Question } from "./Question";
 export const Quiz = () => {
     const [quizzes, setQuizzes] = React.useState([]);
@@ -112,6 +113,7 @@ export const Quiz = () => {
     }
    return (
     <section className="questions">
+        {score === 5 && <Confetti/>}
         {allQuizzes}
         {gameOver && <p className="score">you scored {score}/{quizzes.length} correct answers !</p>}
         {
@@ -119,7 +121,6 @@ export const Quiz = () => {
             ? <button className="btn" onClick={playAgain}>Play Again</button> 
             : <button className="btn" onClick={checkAnswers}>Check answers</button>
         }
-        
     </section>
    );
 };
