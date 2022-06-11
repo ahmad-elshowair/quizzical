@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 import React from "react"
-import Confetti from "react-confetti/dist/types/Confetti";
+import Confetti from "react-confetti";
 import { Question } from "./Question";
 export const Quiz = () => {
     const [quizzes, setQuizzes] = React.useState([]);
