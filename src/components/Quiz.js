@@ -58,23 +58,6 @@ export const Quiz = () => {
         });
     };
 
-
-    // function selectAnswer(questionId, answer) {
-    //     // get that question, update its userAnswer property
-    //     setQuizzes((prevData) => {
-    //       return prevData.map((question) => {
-    //         if (question.id === questionId) {
-    //           return {
-    //             ...question,
-    //             userAnswer: answer,
-    //           };
-    //         } else {
-    //           return question; // must specify the unmodified version too
-    //         }
-    //       });
-    //     });
-    //   }
-
     const allQuizzes = quizzes.map((quiz) => {
          return <Question 
                     key={quiz.id}
