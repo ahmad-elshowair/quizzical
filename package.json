@@ -1,9 +1,12 @@
 {
+  "homepage": "https://ahmad-elshowair.github.io/quizzical",
   "name": "quizzical",
   "version": "1.0.0",
   "description": "fetch 5 quizzes from an api and check on them",
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build"
   },
   "keywords": [],
@@ -33,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
