@@ -3,7 +3,7 @@ export const Home = ({showQuestions}) => {
         <section className="main--home">
             <h1 className="home--heading">Quizzical</h1>
             <p className="home--description">
-                Some description if needed
+                Have Fun with Quizzical Game 🙂 
             </p>
             <button 
                 className="btn"
