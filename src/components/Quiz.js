@@ -66,6 +66,7 @@ export const Quiz = () => {
                     responses={quiz.answers}
                     isRevealed={quiz.isRevealed}
                     userAnswer={quiz.userAnswer}
+                    correctAnswer={quiz.correctAnswer}
                     handlePickAnswer={pickAnswer}
                 />
     });
