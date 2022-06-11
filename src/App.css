@@ -150,7 +150,9 @@ hr{
     border: 1.4px solid #8F94AD;
   }
 
-
+.score{
+    font-weight: 700;
+}
 /* ===========   END STYLE QUESTIONS SECTION =========== */
 
 /* ===========   START STYLE FOOTER SECTION =========== */

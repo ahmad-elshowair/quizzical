@@ -71,11 +71,55 @@ export const Quiz = () => {
                 />
     });
 
-    
+    const checkAnswers =()=>{
+        setQuizzes((prevQuestions)=>{
+            return prevQuestions.map((question)=>{
+                if(question.userAnswer === question.correctAnswer){
+                    return{
+                        ...question,
+                        isRevealed: true,
+                        isCorrect: true
+                    }
+                }else{
+                    return{
+                        ...question,
+                        isRevealed: true
+                    }
+                }
+            })
+        });
+        setGameOver(true);
+    };
+
+    React.useEffect(()=>{
+        setScore(increaseScore());
+    },[quizzes]);
+
+    const increaseScore = ()=>{
+        let score = 0;
+        quizzes.forEach((quiz)=>{
+            if(quiz.isCorrect){
+                score++;
+            }
+        });
+        return score
+    };
+
+    const playAgain = () =>{
+        setGameOver(false);
+        setScore(0);
+        fetchData()
+    }
    return (
     <section className="questions">
         {allQuizzes}
-        <button className="btn">Check answers</button>
+        {gameOver && <p className="score">you scored {score}/{quizzes.length} correct answers !</p>}
+        {
+            gameOver 
+            ? <button className="btn" onClick={playAgain}>Play Again</button> 
+            : <button className="btn" onClick={checkAnswers}>Check answers</button>
+        }
+        
     </section>
    );
 };
